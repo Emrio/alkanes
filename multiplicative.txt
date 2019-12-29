@@ -1,7 +1,7 @@
 
 di
 tri
-tétra
+tetra
 penta
 hexa
 hepta

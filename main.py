@@ -23,7 +23,7 @@ def sandboxed_exec(f, *args):
     return 'exit'
   except Exception as e:
     traceback.print_exc()
-    print(f"\n\t\t^^^^^^^^\n" + colors.fail('Outch! A routine failed during execution. Please make sure to report this error.'))
+    print("\n\t\t^^^^^^^^\n" + colors.fail('Outch! A routine failed during execution. Please make sure to report this error.'))
 
 def cmd_parser(cmd):
   cmd = cmd.strip()

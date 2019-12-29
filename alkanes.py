@@ -23,7 +23,6 @@ class Carbon:
     self.neighbors = neighbors
 
   def add_neighbor(self, neighbor):
-    print('ADDING TO ', self)
     if len(self.neighbors) >= 4:
       raise Exception("A carbon atom can't have more than 4 neighbors!")
     self.neighbors.append(neighbor)

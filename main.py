@@ -1,7 +1,7 @@
 import sys
 import traceback
 from colors import colors
-from alcanes import Molecule, Carbon, load_data
+from alkanes import Molecule, Carbon, load_data
 
 ids = list('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#')
 
@@ -39,7 +39,7 @@ def cmd_parser(cmd):
   - 'parse' : Opens the interactive parser
   - 'parse interactive' : Opens the interactive parser
   - 'parse manual' : Opens the manual parser
-  - 'help' : Show this page
+  - 'help' : Shows this page
   - 'exit' : Exits the CLI""")
   elif cmd != '' and cmd != None:
     print(f"Unknown command '{colors.okblue(cmd)}'. Please check for typos or type 'help'")
@@ -52,10 +52,10 @@ def prompt():
 def startup():
   load_data('names.txt', 'multiplicative.txt')
   print(f"""
-       * {colors.bold(colors.header('Alcanes'))} *
+       * {colors.bold(colors.header('Alkanes'))} *
 
-This tool names alcane molecules you provide.
-IMPORTANT: Please make sure the molecules you feed in are real non-cyclic alcanes
+This tool names alkane molecules you provide.
+IMPORTANT: Please make sure the molecules you feed in are real non-cyclical alkanes
 This tool provides two parser input methods: manual and interactive
 Type 'help' for help on the commands available
 """)
@@ -76,7 +76,7 @@ def manual_parser():
 def interactive_parser():
   carbons = [Carbon(0)]
   clear()
-  print(f"""Describe the bonds between the carbon atoms. At each step, you will add a new carbon atom, write the name of the carbon atom to which it is attached to (e.g: type 4 if the next atom if bound to the #4 atom)
+  print(f"""Describe the bonds between the carbon atoms. At each step, you will add a new carbon atom, write the name of the carbon atom to which it is attached to (e.g: type 4 if the next atom is bound to the #4 atom)
 Type -1 when you don't wan't to add any new carbon atoms
 {colors.warning('WARNING')}: This parser can only handle up to {len(ids)} carbon atoms! For larger molecules, please use the manual parser.
 {colors.warning('WARNING')}: This parser comes with a previewer which might still be buggy!""")

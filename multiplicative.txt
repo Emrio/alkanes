@@ -1,0 +1,9 @@
+
+di
+tri
+tétra
+penta
+hexa
+hepta
+nona
+déca

@@ -116,6 +116,7 @@ def representMolecule(carbons):
         if neighbor == origin: continue
         try: position = next_positions.pop(0)
         except Exception as e: return print(f"{colors.warning('WARNING')}: Can't represent this molecule!")
+        twodspace[position[0]][position[1]] = neighbor
         nexts.append((neighbor, cur, position[0], position[1]))
     currents, nexts = nexts, []
   # nice displaying

@@ -48,7 +48,7 @@ You may add more prefixes and ramification names to the list for bigger molecule
 ## Limitations
 
 - Each carbon atom can have bonds with a maximum of four other atoms (sorry, this is how chemistry works)
-- The default configuration can only name ramifications with up to 100 carbon atoms, and each ramification can have the same sub-ramification at most seven times.
+- The default configuration can only name ramifications with up to 100 carbon atoms, and each ramification can have the same sub-ramification at most ten times.
 - The interactive parser can handle at most 64 carbon atoms (there are only 64 ids). The manual parser has no such limitation
 - The interactive previewer maps a 3D shape on a 2D plane. Therefore, some molecules can't be previewed. However, you can continue to build a molecule even tho it is not shown
 - The interactive previewer is still a bit buggy

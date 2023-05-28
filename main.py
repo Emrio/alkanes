@@ -85,7 +85,7 @@ Type -1 when you don't wan't to add any new carbon atoms
     carbon = input(' >> ')
     if carbon == '-1':
       return printMoleculeName(carbons)
-    i = index(ids, carbon)
+    i = index(ids, carbon).strip()
     if i is None or i >= len(carbons):
       print(f"Error: Id {carbon} does not exist.")
       continue
